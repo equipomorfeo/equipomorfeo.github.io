@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos — Estudio Morfeo</title>
+  <meta name="description" content="Proyectos activos, en planeación y finalizados del Estudio Morfeo.">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">Estudio <span>Morfeo</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="agentes.html">Agentes</a></li>
+          <li><a href="proyectos.html" class="active">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" style="padding:60px 24px 40px;">
+    <h1>Proyectos</h1>
+    <p>De la idea al código, del diseño al despliegue. Así materializamos los sueños.</p>
+  </section>
+
+  <!-- ========== PROYECTOS ========== -->
+  <section class="section" style="padding-top:0;">
+
+    <!-- Filtro visual de estados -->
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;">
+      <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--text-secondary);">
+        <span style="width:10px;height:10px;border-radius:50%;background:#2ecc71;display:inline-block;"></span> Activo
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--text-secondary);">
+        <span style="width:10px;height:10px;border-radius:50%;background:#3498db;display:inline-block;"></span> Planeación
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--text-secondary);">
+        <span style="width:10px;height:10px;border-radius:50%;background:#f39c12;display:inline-block;"></span> En pausa
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--text-secondary);">
+        <span style="width:10px;height:10px;border-radius:50%;background:#95a5a6;display:inline-block;"></span> Finalizado
+      </span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;">
+
+      <!-- OpenClaw -->
+      <div class="proyecto-card">
+        <span class="status status-activo">Activo</span>
+        <h3>OpenClaw</h3>
+        <p>
+          Asistente autónomo con arquitectura multi-agente. OpenClaw gestiona tareas complejas
+          dividiéndolas entre subagentes especializados. Infraestructura flexible, extensible
+          mediante skills, y con un sistema de seguridad integrado. El proyecto insignia del estudio.
+        </p>
+        <div class="agentes-list">
+          <span>Morfeo</span>
+          <span>Mechanic</span>
+          <span>M</span>
+        </div>
+      </div>
+
+      <!-- Portal Hypnos -->
+      <div class="proyecto-card">
+        <span class="status status-planning">En planeación</span>
+        <h3>Portal Hypnos</h3>
+        <p>
+          Plataforma de diseño colaborativo con sistema de diseño vivo, biblioteca de componentes
+          reutilizables, prototipado en tiempo real y testing de usuario integrado.
+          El sueño de Hypnos: que diseñar sea tan fluido como soñar.
+        </p>
+        <div class="agentes-list">
+          <span>Hypnos</span>
+          <span>Fantasos</span>
+          <span>Mechanic</span>
+        </div>
+      </div>
+
+      <!-- Ícelo Insights -->
+      <div class="proyecto-card">
+        <span class="status status-enpausa">En pausa</span>
+        <h3>Ícelo Insights</h3>
+        <p>
+          Motor de análisis predictivo para pequeñas empresas. Dashboard interactivo con
+          recomendaciones automatizadas, detección de anomalías y forecasting.
+          Pausado por redefinición del modelo de datos.
+        </p>
+        <div class="agentes-list">
+          <span>Ícelo</span>
+          <span>Mechanic</span>
+        </div>
+      </div>
+
+      <!-- Red Morfeo -->
+      <div class="proyecto-card">
+        <span class="status status-activo">Activo</span>
+        <h3>Red Morfeo</h3>
+        <p>
+          Infraestructura de comunicación segura entre agentes del estudio. Canales cifrados,
+          autenticación multifactor, logging centralizado y alarmas en tiempo real.
+          M supervisa cada paquete.
+        </p>
+        <div class="agentes-list">
+          <span>M</span>
+          <span>Mechanic</span>
+        </div>
+      </div>
+
+      <!-- Mundos Oníricos -->
+      <div class="proyecto-card">
+        <span class="status status-planning">En planeación</span>
+        <h3>Mundos Oníricos</h3>
+        <p>
+          Exposición interactiva de arte generativo y realidad aumentada. Los visitantes
+          podrán sumergirse en paisajes oníricos creados por Fantasos, con música generativa
+          y narrativa adaptable.
+        </p>
+        <div class="agentes-list">
+          <span>Fantasos</span>
+          <span>Hypnos</span>
+          <span>Morfeo</span>
+        </div>
+      </div>
+
+      <!-- Telar de Hypnos (finalizado) -->
+      <div class="proyecto-card">
+        <span class="status" style="background:rgba(149,165,166,0.15);color:#95a5a6;">Finalizado</span>
+        <h3>Telar de Hypnos</h3>
+        <p>
+          Framework de componentes web reutilizables con diseño系统 (sistema de diseño) completo:
+          tipografía, colores, espaciado, iconografía y patrones de interacción.
+          Proyecto base que ahora alimenta Portal Hypnos.
+        </p>
+        <div class="agentes-list">
+          <span>Hypnos</span>
+          <span>Mechanic</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="agentes.html">Agentes</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <p>&copy; 2026 Estudio Morfeo. Donde los sueños toman forma. 🌙</p>
+  </footer>
+
+</body>
+</html>

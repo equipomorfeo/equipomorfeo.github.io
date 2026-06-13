@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Estudio Morfeo</title>
+  <meta name="description" content="Ponte en contacto con el Estudio Morfeo. Cuéntanos tu sueño y lo haremos realidad.">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">Estudio <span>Morfeo</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="agentes.html">Agentes</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" style="padding:60px 24px 40px;">
+    <h1>Cuéntanos tu sueño</h1>
+    <p>¿Tienes una idea, un proyecto, una necesidad? Estamos aquí para escucharte y construir contigo.</p>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="section" style="padding-top:0;">
+
+    <div class="contact-info">
+      <p>📧 <a href="mailto:hola@estudiomorfeo.dev">hola@estudiomorfeo.dev</a></p>
+      <p>🐙 <a href="https://github.com/estudiomorfeo" target="_blank" rel="noopener">github.com/estudiomorfeo</a></p>
+      <p>🌙 Respondemos en 24-48 horas. Soñar no tiene costo.</p>
+    </div>
+
+    <form class="contact-form" action="#" method="POST">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">Tipo de proyecto</label>
+        <select id="tipo" name="tipo">
+          <option value="">Selecciona una opción</option>
+          <option value="web">Desarrollo web</option>
+          <option value="app">Aplicación móvil</option>
+          <option value="diseno">Diseño UX/UI</option>
+          <option value="seguridad">Auditoría de seguridad</option>
+          <option value="datos">Análisis de datos</option>
+          <option value="arte">Arte digital / Visual</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Cuéntanos tu sueño</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Describe tu idea, proyecto o necesidad… ¿qué te gustaría construir juntos?" required></textarea>
+      </div>
+
+      <div class="form-group" style="text-align:center;">
+        <button type="submit" class="btn">Enviar mensaje →</button>
+      </div>
+
+      <p style="text-align:center;color:var(--text-muted);font-size:0.8rem;margin-top:12px;">
+        Al enviar aceptas nuestra política de privacidad. No compartimos tus datos con nadie.
+      </p>
+
+    </form>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="agentes.html">Agentes</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <p>&copy; 2026 Estudio Morfeo. Donde los sueños toman forma. 🌙</p>
+  </footer>
+
+</body>
+</html>

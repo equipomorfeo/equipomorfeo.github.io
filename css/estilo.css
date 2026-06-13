@@ -1,0 +1,459 @@
+/* ============================================================
+   Estudio Morfeo — Estilos principales
+   Tema: onírico, oscuro con acentos violeta/dorado
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --bg-primary: #0d0b15;
+  --bg-secondary: #151220;
+  --bg-card: #1e1a2e;
+  --accent: #9b59b6;
+  --accent-light: #bb8fce;
+  --gold: #d4af37;
+  --gold-light: #f0d68a;
+  --text-primary: #f0eef6;
+  --text-secondary: #b8b0d0;
+  --text-muted: #6b6390;
+  --border: #2a2540;
+  --shadow: rgba(155, 89, 182, 0.15);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===================== HEADER / NAV ===================== */
+
+header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--accent-light);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+/* ===================== HERO ===================== */
+
+.hero {
+  text-align: center;
+  padding: 100px 24px 80px;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(155, 89, 182, 0.08) 0%, transparent 70%);
+  transform: translate(-50%, 0);
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 32px;
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), #7d3c98);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent-light);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ===================== SECTION ===================== */
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  font-size: 1.05rem;
+}
+
+/* ===================== CARDS (agentes / proyectos) ===================== */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+
+.card .role {
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.card .tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.card .tag {
+  background: rgba(155, 89, 182, 0.15);
+  color: var(--accent-light);
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.card-large {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  justify-self: center;
+}
+
+/* ===================== PROYECTOS ===================== */
+
+.proyecto-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: var(--transition);
+}
+
+.proyecto-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px var(--shadow);
+}
+
+.proyecto-card h3 {
+  color: var(--gold-light);
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.proyecto-card .status {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.status-activo {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+}
+
+.status-planning {
+  background: rgba(52, 152, 219, 0.15);
+  color: #3498db;
+}
+
+.status-enpausa {
+  background: rgba(243, 156, 18, 0.15);
+  color: #f39c12;
+}
+
+.proyecto-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.proyecto-card .agentes-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.proyecto-card .agentes-list span {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border-radius: 50px;
+}
+
+/* ===================== FORMULARIO ===================== */
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.15);
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-secondary);
+}
+
+.contact-info a {
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: var(--gold);
+}
+
+/* ===================== FOOTER ===================== */
+
+footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+footer .footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+footer .footer-links a:hover {
+  color: var(--gold);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 24px;
+    gap: 8px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 48px 20px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
