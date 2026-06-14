@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><title>Manual Recuperación Morfeo</title>
+<style>body{font-family:Arial,sans-serif;max-width:800px;margin:auto;padding:20px;line-height:1.6}
+.step{background:#f8f6ff;border-left:4px solid #9b59b6;padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0}
+code{background:#f0eef6;color:#6c3483;padding:2px 6px;border-radius:4px;font-size:13px}
+pre{background:#1a1a2e;color:#f0eef6;padding:12px;border-radius:6px;overflow:auto;font-size:13px}
+h2{color:#6c3483;border-bottom:1px solid #ddd;padding-bottom:6px}
+</style></head><body>
+<h1>🆘 Manual Recuperación</h1>
+<p><strong>Estudio Morfeo 🕶️</strong> — 14 jun 2026</p>
+
+<h2>Paso 1 — Instalar OpenClaw</h2>
+<div class="step">Ve a <strong>openclaw.ai</strong>, descarga, instala y configura.</div>
+
+<h2>Paso 2 — Recuperar archivos</h2>
+<div class="step"><pre>git clone https://github.com/equipomorfeo/morfeo-workspace.git ~/.openclaw/workspace</pre>
+Usuario: <code>equipomorfeo</code> · Pass: <code>rY.v3;xHE</code></div>
+
+<h2>Paso 3 — Credenciales</h2>
+<div class="step"><pre>nano ~/.openclaw/workspace/memory/credenciales.md</pre>
+Pega: User: equipomorfeo · Pass: rY.v3;xHE · Email: equipomorfeo@protonmail.com</div>
+
+<h2>Paso 4 — Backup</h2>
+<div class="step"><pre>cd ~/.openclaw/workspace && bash scripts/backup-daily.sh</pre></div>
+
+<h2>Paso 5 — Hablar con Morfeo</h2>
+<div class="step">Abre OpenClaw y háblame. Todo vuelve a funcionar.</div>
+
+<h2>⚠️ Notas</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr><th>Problema</th><th>Solución</th></tr>
+<tr><td>No sé git clone</td><td>Solo pega el comando del Paso 2 en terminal</td></tr>
+<tr><td>VM/PC roto</td><td>El backup está en GitHub. Cualquier PC vale.</td></tr>
+</table>
+<p style="color:#999;text-align:center;margin-top:30px">Creado por Morfeo 🕶️ · equipomorfeo/morfeo-workspace</p>
+</body></html>
