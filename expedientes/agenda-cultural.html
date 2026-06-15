@@ -62,7 +62,7 @@ Techno, house, electrónica	Cartel completo	Amantes de la electrónica
  const rawData = document.getElementById('rawData').innerText.trim();
  const tabsContainer = document.getElementById('tabs');
  const contentContainer = document.getElementById('content');
- const sections = rawData.split(/\n(?====)/);
+ const sections = ('\n' + rawData).split(/\n(?==== )/);
  let isFirst = true;
 
  sections.forEach((sec, index) => {
