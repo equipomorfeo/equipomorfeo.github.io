@@ -3,225 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Archivo — Agenda Cultural de Asturias</title>
+<title>El Archivo — Agenda Cultural</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0d0b15;color:#e2d9e6;font-family:Georgia,'Times New Roman',serif;max-width:860px;margin:auto;padding:40px 20px}
-h1{color:#d4af37;text-align:center;border-bottom:2px solid #9b59b6;padding-bottom:18px;margin-bottom:8px;font-size:2em}
-h2{color:#d4af37;border-left:4px solid #9b59b6;padding-left:14px;margin:44px 0 18px;font-size:1.4em}
-.e{background:#161224;padding:14px 18px;margin:10px 0;border-left:4px solid #d4af37;border-radius:0 8px 8px 0;transition:background .2s}
-.e:hover{background:#1e182e}
-.e b{display:block;color:#e8dcc8;font-size:1.05em;margin-bottom:4px}
-.m{color:#9b59b6;font-size:0.9em;display:flex;flex-wrap:wrap;gap:12px;margin-bottom:4px}
-.m span{white-space:nowrap}
-.p{color:#666;font-size:0.82em;line-height:1.5}
-.cat{display:inline-block;background:#9b59b622;color:#9b59b6;padding:2px 8px;border-radius:4px;font-size:0.78em;margin-right:4px}
-.footer{text-align:center;color:#555;margin-top:50px;padding-top:20px;border-top:1px solid #9b59b619;font-size:0.8em}
-.footer a{color:#9b59b6}
-.update{text-align:center;color:#999;font-size:0.85em;margin:8px 0 0}
-.note{background:#2a1a2e;color:#c9b;font-size:0.82em;padding:8px 14px;border-radius:6px;margin:24px 0;text-align:center}
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ body { background: #0d0b15; color: #e2d9e6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: auto; padding: 30px 20px; }
+ h1 { color: #d4af37; text-align: center; border-bottom: 2px solid #9b59b6; padding-bottom: 15px; margin-bottom: 5px; font-size: 2.2em; }
+ .subtitle { text-align: center; color: #888; font-size: 0.9em; margin-bottom: 30px; }
+ .tabs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+ .tab-btn { background: #161224; color: #d4af37; border: 1px solid #9b59b6; padding: 12px 20px; cursor: pointer; border-radius: 8px; font-weight: bold; font-size: 1em; transition: all 0.2s; }
+ .tab-btn:hover { background: #2a2045; }
+ .tab-btn.active { background: #9b59b6; color: #fff; border-color: #d4af37; box-shadow: 0 0 10px rgba(155, 89, 182, 0.5); }
+ .tab-content { display: none; animation: fadeIn 0.4s; }
+ .tab-content.active { display: block; }
+ @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+ .event-card { background: #161224; border-left: 4px solid #d4af37; padding: 18px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+ .event-title { font-size: 1.3em; font-weight: bold; color: #fff; margin-bottom: 8px; }
+ .event-meta { font-size: 0.95em; color: #aaa; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+ .event-desc { font-size: 0.9em; color: #ccc; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
+ #rawData { display: none; }
 </style>
 </head>
 <body>
+<h1>EL ARCHIVO</h1>
+<p class="subtitle" id="fecha-act">Agenda Cultural de Asturias · Actualizado: 15/06/2026</p>
+<div class="tabs" id="tabs"></div>
+<div id="content"></div>
+<pre id="rawData">
+=== FESTIVALES ===
+2, 8, 9 y 10 de mayo	Arenas de Cabrales	Folk, rock, tradición asturiana
+Programación activa	Familias, ambiente local y cultura popular	16 de mayo
+Recinto Ferial Luis Adaro, Gijón	Indie, rock, pop alternativo	Cartel y horarios avanzados
+Un día de conciertos sin complicarse	5, 6 y 7 de junio	Parque Fluvial de Viesques, Gijón
+Folk, tradición, cultura asturiana	Fechas y formato confirmados	Plan familiar y música tradicional
+26, 27 y 28 de junio	Oviedo y Ribera de Arriba	Indie, pop, vanguardia
+Cartel principal anunciado	Público inquieto y propuestas diferentes	26 de junio al 5 de julio
+Recinto Ferial Luis Adaro, Gijón	Pop, rock, cultura, ocio	Programación amplia anunciada
+Familias, grupos mixtos y ocio urbano	Julio	Parque Hermanos Castro, Gijón
+Pop, indie, nostalgia, reguetón	Fechas principales anunciadas	Conciertos sueltos y plan de ciudad
+16, 17 y 18 de julio	Llanera	Urbano, reguetón, trap, hip hop
+Cartel muy avanzado	Público joven y macrofestival	6, 7 y 8 de agosto
+Cangas del Narcea	Indie, rock alternativo	Cartel completo
+Música independiente y escapada rural	13, 14, 15 y 16 de agosto	Arriondas
+Techno, house, electrónica	Cartel completo	Amantes de la electrónica
 
-<h1>EL ARCHIVO — Agenda Cultural de Asturias</h1>
-<div class="update">Actualizado: 15/06/2026 · Próximos eventos confirmados</div>
+=== FIESTAS Y CONCIERTOS ===
+706f15c67b3b0db09822c20611762862525/agenda-noviembre-asturias.jpg" >                                                                                                            [{"@context":"http://schema.org","@type":"Webpage","@id":"https://blog.telecable.es/agenda-planes-asturias/#webpage","name":"Agenda junio de Asturias","description":"La agenda para saber qué hacer en Asturias este mes y que disfrutes de conciertos y festivales, teatro, exposiciones y fiestas todos los fines de semana.","datePublished":"2026-06-01T06:06:00+00:00","dateModified":"2026-06-05T07:06:01+00:00","isPartOf":{"@type":"Website","@id":"https://blog.telecable.es#website"}},{"@context":"http://schema.org","@type":"NewsArticle","@id":"https://blog.telecable.es/agenda-planes-asturias/#newsarticle","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.telecable.es/agenda-planes-asturias/#webpage"},"headline":"Agenda junio de Asturias","description":"La agenda para saber qué hacer en Asturias este mes y que disfrutes de conciertos y festivales, teatro, exposiciones y fiestas todos los fines de semana.","image":[{"@type":"ImageObject","@id":"https://blog.telecable.es/embed/706f15c67b3b0db09822c20611762862525/agenda-noviembre-asturias.jpg#image","url":"https://blog.telecable.es/embed/706f15c67b3b0db09822c20611762862525/agenda-noviembre-asturias.jpg","width":1200,"height":675}],"articleSection":"Actualidad","wordCount":1701,"publisher":{"@type":"Organization","name":"Blog Telecable","logo":{"@type":"ImageObject","url":"https://blog.telecable.es/embed/0196bfebdc751a40a1d42872b8055a9df1678707108/Logo-Telecable.svg"}},"inLanguage":"es_ES","datePublished":"2026-06-01T06:06:00+00:00","dateModified":"2026
+2 align="left" class="western">Nos vamos de fiestas en junio en Asturias Imagen: Cámara Gijón5 a 7 de junio 2026: Fiestas de Bolgues (Las Regueras)5 a 21 de junio 2026: Fiestas de Cangas de Onís6 a 7 de junio 2026: XXX Certamen del Quesu d’Urbiés en Mieres7 de junio 2026: Preba de la sidra de Gascona en Oviedo7 de junio 2026: Alfombras florales del Corpus en Castropol7 de junio 2026: Festival de la Boroña en Torazo (Cabranes)11 a 24 de junio 2026: Fiestas de San Juan en Mieres12 a 14 de junio 2026: Fiesta Sacramental de Logrezana (Carreño)12 a 14 de junio 2026: Feria San Antonio en Gijón12 a 20 de junio 2026: FIMI (Festival Internacional de la Máscara Ibérica)14 de junio 2026: Travesía Internacional Costa Naviega en Navia14 de junio 2026: VII Paellada Popular en Bimenes17 a 21 de junio 2026: Feria del Libro de Gijón/Xixón 2026 19 a 21 de junio 2026: Fiestas de Viesques19 a 21 de junio 2026: Festival Rociero en Llanes23 de junio 2026: San Juan Oviedo23 de junio 2026: San Juan Gijón24 de junio 2026: La Sacramental de Cué en Llanes24 de junio 2026: Procesión Marinera de San Juan en Soto del Barco26 a 29 de junio 2026: Fiestas de San Pedro y San Pablo del Barrio de La Luz en Avilés28 de junio a 1 de julio 2026: Fiestas de Cudillero29 de junio 2026: L’Amuravela 2026 en CudilleroConciertos y festivales en AsturiasImagen: Kuivi Almacenes5 de junio 2026: Saturna, en Avilés El hard rock de Saturna cierra el ciclo Factoría Sound de primavera con un concierto el viernes 5 de junio en el Espacio Escénico de la Factoría Cultural de Avilés.6 de junio 2026: YUNGMORPHEUS on DOP!, en Oviedo La última parada del "EURO TOUR 2026" del icono referente del underground avant-garde YUNGMORPHEUS on DOP! es Oviedo. Apunta la cita: día 6 de junio, en Almacenes Kuivi.7 de junio 2026: Pablo Valdés, en OviedoPablo Valdés presenta en directo las canciones de "El Faro", su último disco, en El Burlesque Club de Oviedo el día 7 de junio.12 de junio 2026: Ciudad Naranco, en Gijón Indie local con Ciudad Naranco para la noche del día 12 de junio. En Bola 8 de Gijón.12 de junio 2026: ESODIC, en Avilés El death metal técnico de ESODIC sonará en el Paseo Malecón de Avilés el viernes 12 de junio. Llegan acompañados de la banda francesa Tanork.12 de junio 2026: Alejandro Sanz, en GijónTras un inicio triunfal en México, la gira mundial "¿Y Ahora Qué?" de Alejandro Sanz llega a Asturias. Actuará en el Parque de los Hermanos Castro de Gijón el viernes 12 de junio.Es una de las citas más destacadas de Los Conciertos del Parque, en cuyo cartel también figuran Antonio Orozco (sábado 6 de junio) y Lola Índigo (viernes 19 de junio).20 de junio 2026: El Último de la Fila, en AvilésUna de las giras más esperadas de 2026, la de El Último de la Fila, hace parada en Avilés (exterior del Pabellón de Exposiciones La Magdalena) el sábado 20 de junio.20 de junio 2026: LASDJCREW, en Gijón El estilo crudo del rap underground de LASDJCREW sonará en la Sala Buddha de Gijón el día 20 de junio.Imagen: Naiara Moore20 de junio 2026: Naiara Moore, en Oviedo El R_DATOS_AQUI_amp;B contemporáneo, mezclado con influencias urbanas y una elegante puesta en escena, son las señas de identidad de Naiara Moore. En directo, el día 20 de junio en la sala Galaxy Gong de Oviedo.20 de junio 2026: Shinova, en Gijón Shinova estrena en directo su nuevo trabajo, “La Tormenta Perfecta”, en un formato expandido con sección de cuerdas en directo. En Laboral Ciudad de la Cultura de Gijón, el sábado 20 de junio.21 de junio 2026: Ravagers, en OviedoRavagers fusionan punk y hard rock de forma desordenada, pero aguda. Escúchales en directo en la Sala Galaxy Gong de Oviedo el día 21 de junio.26 de junio 2026: Aitana, en Avilés El Pabellón de Exposiciones La Magdalena recibe a una de las artistas más populares de la música actual. La cita avilesina con Aitana y su "Cuarto Azul World Tour" es el viernes 26 de junio.Imagen: VESU Oviedo26 a 28 de junio 2026: “VeSu Oviedo 2026”, en Oviedo Cita con la música indie en “VeSu Oviedo 2026”. Del 26 al 28 de junio, por la Central Artística de Bueño pasarán artistas como María Arnal, Depresión Sonora o Dora Band.26 de junio a 5 de julio 2026: “Metrópoli Gijón 2026”, en Gijón Juan Magán + 3PAC, Coti, Comandante Twin o Sidecars son algunos de los nombres que figuran en el cartel del “Metrópoli Gijón 2026”, que se celebra del 26 de junio al 5 de julio en el gijonés recinto ferial Luis Adaro.Las mejores obras de teatro en AsturiasImagen: Teatro Palacio Valdés2 de junio 2026: "Una noche en el instituto", en Gijón Un grupo de amigos despide su último año de instituto pasando una noche en él. Si quieres saber cómo continúa la historia, tienes cita en el Centro Municipal Integrado El Llano de Gijón el día 2 de junio.4 de junio 2026: "Inteligencia Artificial (Ay)", en Avilés Dos personalidades de máxima actualidad y dos tonos distintos de humor se presentan como dos inteligencias naturales hablando sobre la Inteligencia Artificial. Escúchales en el Teatro Palacio Valdés de Avilés el día 4 de junio.6 de junio 2026: "Cucaracha", en Avilés"Cucaracha" retrata cómo una comunidad educativa intenta no desmoronarse mientras sus adolescentes se convierten en material de guerra. En el Centro Niemeyer de Avilés, el día 6 de junio.6 de junio 2026: "American Buffalo", en Gijón “American Buffalo” nos transporta al mundo de Don, el propietario de una tienda de chatarra en Chicago, y su intento de recuperar una valiosa moneda. Multipremiada obra teatral que puedes ver en el Teatro Jovellanos de Gijón el sábado 6 de junio.Imagen: Laboral Ciudad de la Cultura6 de junio 2026: Abián Díaz: "Patético", en Gijón "Patético" es el show con el que Abián Díaz promete risas a raudales. En Laboral Ciudad de la Cultura de Gijón, el día 6 de junio.26 de junio 2026: "Esencia", en AvilésJuan Echanove y Joaquín Climent encabezan el cartel de "Esencia", una obra de teatro que narra el encuentro de dos viejos amigos que esperan a un misterioso autor. Disfrútala en el Teatro Palacio Valdés de Avilés el viernes 26 de junio.Exposiciones en los museos asturianosImagen: Centro NiemeyerHasta el 22 de junio 2026: "La Hestoria d’Avilés", en Avilés "La Hestoria d’Avilés" se compone de una selección de 40 viñetas, dibujadas en color con tinta china, que recogen los principales acontecimientos de la ciudad, de la mano del profesor y dibujante Miguel Solís Santos. Está expuesta en el Centro Sociocultural de La Carriona de Avilés.Durante todo el mes de junio 2026: "Agua", en Avilés "Agua" es una exposición del reconocido fotógrafo canadiense Edward Burtynsky, famoso por la riqueza cromática y la combinación de estética y crítica en sus obras. Abierta al público en el Centro Niemeyer de Avilés.4 a 27 de junio 2026: "Solsticio de verano", en Gijón La Sociedad Cultural GESTO reúne en “Solsticio de verano” el trabajo realizado por varios autores inspirándose en el solsticio que comienza con la hoguera de San Xuan. Puedes ver la muestra en el Centro Municipal Integrado Ateneo de La Calzada de Gijón.Desde el 4 de junio 2026: "Intercambios", en Oviedo Muestra organizada en varios conjuntos temáticos a partir de un eje discursivo general, la globalización a lo largo de la Historia. En el Museo de Bellas Artes de Asturias (Oviedo).Más agenda cultural de Asturias en junioImagen: Bienal Climática1 a 3 de junio 2026: “VI Conciertos Imposibles”, en GijónDisfruta en la gran pantalla de conciertos míticos que ya no pueden repetirse. The Rolling Stones, Patti Smith o Rammstein son algunos de los protagonistas del ciclo “VI Conciertos Imposibles”, que tiene como sedes el Centro Municipal Integrado El Llano y la Escuela de Comercio de Gijón.6 de junio 2026: "ABBA: Revolution Tour. The new experience", en Oviedo Un show musical vibrante y revolucionario con toda la magia del legendario grupo sueco ABBA. En el Teatro Filarmónica de Oviedo, el sábado 6 de junio.12 a 21 de junio 2026: “Festival Internacional del Humor”, en Oviedo Teatro, stand-up comedy, danza, magia y mucho más, bajo la batuta de Joaquín Pajarón, en el “Festival Internacional del Humor de Oviedo”, que se celebra del 12 al 21 de junio. Consulta aquí la agenda completa.12 junio a 20 de septiembre 2026: "Bienal Climática | Arte, Industria y Territorio", en Avilés La primera edición de la "Bienal Climática | Arte, Industria y Territorio" se celebra en Avilés del 12 de junio al 20 de septiembre de 2026. Incluye exposiciones, charlas, talleres, rutas, performance...13 de junio 2026: "Film Symphony Orchestra. Wanted", en Gijón Un espectáculo musical donde los míticos acordes del western cobran vida con la Film Symphony Orchestra. En Laboral Ciudad de la Cultura de Gijón, el sábado 13 de junio.18 y 20 de junio 2026: "Maharajá", en Oviedo Zarzuela en un acto, con música de Guillermo Martínez y libreto de Maxi Rodríguez. En el Teatro Campoamor de Oviedo, los días 17, 18 y 20 de junio.27 de junio 2026: "El ladrón de Arabia: Tributo a Aladdin", en Gijón <font color="#000080
+2026. Una noche mágica del 23 al 24 de junio llena de tradiciones, como el enramado de las fuentes, la hoguera de San Juan en Gijón y la Danza Prima. Tres momentos muy especiales para pedir deseos, quemar lo malo y dar la bienvenida al verano en la fiesta de San Juan en Gijón. Te contamos todo el programa de San Juan Gijón 2026
+29 de junio, por San Pedro, se escucha en Cudillero el sermón de L'Amuravela. Es uno de los momentos más destacados de las fiestas de Cudillero 2026, que duran cinco días, del 27 de junio al 1 de julio para celebrar San Pedro, San Pablo y San Pablín. Te contamos los horarios y el programa de las fiestas de Cudillero 2026
+20 de junio hasta el 7 de septiembre de 2026
+2026, del 26 de junio al 5 de julio. Porque además de conciertos, la entrada diaria de 10€ te da acceso a las food trucks, al market, a las exposiciones y mucho más. Pero hay más modalidades de entradas para los conciertos del Metrópoli 2026
+2026 se celebran el fin de semana del 19 al 21 de junio en la explanada del Parque fluvial. Sesión vermú, orquestas y DJs y la comida vecinal son los platos fuertes de estas fiestas de prao, que cuentan con atracciones, animación y juegos infantiles, o una gran carpa de pulpería para comer. Te contamos el programa de las fiestas de Viesques 2026
 
-<div class="note">⚠️ Actualización manual basada en fuentes contrastadas. Próximamente: automatización diaria.</div>
+=== CONCIERTOS (La Ganzúa) ===
+</pre>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+ const rawData = document.getElementById('rawData').innerText.trim();
+ const tabsContainer = document.getElementById('tabs');
+ const contentContainer = document.getElementById('content');
+ const sections = rawData.split(/(?=🎵|🎪|🎉|🎭|🖼️)/);
+ let isFirst = true;
 
-<h2>🎵 Música y Conciertos</h2>
+ sections.forEach((sec, index) => {
+ if(sec.trim().length === 0) return;
+ const lines = sec.trim().split('\n');
+ let rawTitle = lines.shift().trim();
+ let btnTitle = rawTitle.replace(/🎵|🎪|🎉|🎭|🖼️/g, '').trim();
+ if(!btnTitle) btnTitle = "General";
 
-<div class="e"><b>Saturna — Factoría Sound Primavera</b>
-<div class="m"><span>📍 Avilés, Factoría Cultural (Espacio Escénico)</span><span>🗓️ 5 junio 2026</span></div>
-<div class="p">Hard rock. Cierre del ciclo Factoría Sound de primavera.</div></div>
+ const btn = document.createElement('button');
+ btn.className = 'tab-btn' + (isFirst ? ' active' : '');
+ btn.innerText = btnTitle;
+ btn.onclick = () => showTab(index);
+ tabsContainer.appendChild(btn);
 
-<div class="e"><b>YUNGMORPHEUS on DOP! — EURO TOUR 2026</b>
-<div class="m"><span>📍 Oviedo, Almacenes Kuivi</span><span>🗓️ 6 junio 2026</span></div>
-<div class="p">Underground avant-garde. Última parada del tour europeo.</div></div>
+ const div = document.createElement('div');
+ div.className = 'tab-content' + (isFirst ? ' active' : '');
+ div.id = 'tab-' + index;
 
-<div class="e"><b>Antonio Orozco — Los Conciertos del Parque</b>
-<div class="m"><span>📍 Gijón, Parque Hermanos Castro</span><span>🗓️ 6 junio 2026</span></div>
-<div class="p"><span class="cat">Pop</span>Ciclo de grandes conciertos al aire libre en el parque gijonés.</div></div>
+ let htmlContent = '';
+ let currentCard = '';
+ let currentTitle = '';
 
-<div class="e"><b>Pablo Valdés presenta "El Faro"</b>
-<div class="m"><span>📍 Oviedo, El Burlesque Club</span><span>🗓️ 7 junio 2026</span></div>
-<div class="p"><span class="cat">Autor</span>Presentación en directo de su último disco.</div></div>
+ for(let line of lines) {
+ line = line.trim();
+ if(!line || line.includes('EL ARCHIVO —') || line.includes('Actualizado:') || line.startsWith('⚠️')) continue;
 
-<div class="e"><b>Ciudad Naranco</b>
-<div class="m"><span>📍 Gijón, Bola 8</span><span>🗓️ 12 junio 2026</span></div>
-<div class="p"><span class="cat">Indie</span>Indie local asturiano.</div></div>
+ if(line.startsWith('📍') || line.startsWith('🗓️')) {
+ currentCard += `<div class="event-meta">${line}</div>`;
+ } else if (line.match(/^[A-Z][a-z]/) || line.match(/^[A-Z]+ /) || line.includes('—')) {
+ if (currentTitle && currentCard.includes('📍')) {
+ currentCard += `<div class="event-desc">${line}</div>`;
+ htmlContent += `<div class="event-card"><div class="event-title">${currentTitle}</div>${currentCard}</div>`;
+ currentCard = '';
+ currentTitle = '';
+ } else {
+ currentTitle = line;
+ }
+ } else {
+ if (currentTitle && currentCard) {
+ currentCard += `<div class="event-desc">${line}</div>`;
+ }
+ }
+ }
+ if(currentTitle) {
+ htmlContent += `<div class="event-card"><div class="event-title">${currentTitle}</div>${currentCard}</div>`;
+ }
+ div.innerHTML = htmlContent;
+ contentContainer.appendChild(div);
+ isFirst = false;
+ });
+ });
 
-<div class="e"><b>ESODIC + Tanork (Francia)</b>
-<div class="m"><span>📍 Avilés, Paseo del Malecón</span><span>🗓️ 12 junio 2026</span></div>
-<div class="p"><span class="cat">Metal</span>Death metal técnico con banda invitada francesa.</div></div>
-
-<div class="e"><b>Alejandro Sanz — Gira "¿Y Ahora Qué?"</b>
-<div class="m"><span>📍 Gijón, Parque Hermanos Castro</span><span>🗓️ 12 junio 2026</span></div>
-<div class="p"><span class="cat">Pop</span>Tras inicio triunfal en México, gira mundial llega a Asturias.</div></div>
-
-<div class="e"><b>Lola Índigo — Los Conciertos del Parque</b>
-<div class="m"><span>📍 Gijón, Parque Hermanos Castro</span><span>🗓️ 19 junio 2026</span></div>
-<div class="p"><span class="cat">Pop urbano</span>Cierre del ciclo de conciertos del parque.</div></div>
-
-<div class="e"><b>El Último de la Fila — Gira 2026</b>
-<div class="m"><span>📍 Avilés, Pabellón La Magdalena (exterior)</span><span>🗓️ 20 junio 2026</span></div>
-<div class="p"><span class="cat">Rock/Pop</span>Una de las giras más esperadas del año.</div></div>
-
-<div class="e"><b>LASDJCREW</b>
-<div class="m"><span>📍 Gijón, Sala Buddha</span><span>🗓️ 20 junio 2026</span></div>
-<div class="p"><span class="cat">Rap</span>Rap underground.</div></div>
-
-<div class="e"><b>Naiara Moore</b>
-<div class="m"><span>📍 Oviedo, Sala Galaxy Gong</span><span>🗓️ 20 junio 2026</span></div>
-<div class="p"><span class="cat">R&B</span>R&B contemporáneo con influencias urbanas.</div></div>
-
-<div class="e"><b>Shinova — "La Tormenta Perfecta"</b>
-<div class="m"><span>📍 Gijón, Laboral Ciudad de la Cultura</span><span>🗓️ 20 junio 2026</span></div>
-<div class="p"><span class="cat">Rock</span>Estreno con sección de cuerdas en directo.</div></div>
-
-<div class="e"><b>Ravagers</b>
-<div class="m"><span>📍 Oviedo, Sala Galaxy Gong</span><span>🗓️ 21 junio 2026</span></div>
-<div class="p"><span class="cat">Punk/Hard Rock</span>Fusión desordenada y afilada de punk y hard rock.</div></div>
-
-<div class="e"><b>Aitana — "Cuarto Azul World Tour"</b>
-<div class="m"><span>📍 Avilés, Pabellón La Magdalena</span><span>🗓️ 26 junio 2026</span></div>
-<div class="p"><span class="cat">Pop</span>Una de las artistas más populares del momento.</div></div>
-
-<div class="e"><b>Rodrigo Cuevas</b>
-<div class="m"><span>📍 Asturias (por confirmar)</span><span>🗓️ 2026</span></div>
-<div class="p"><span class="cat">Folk/Contemporáneo</span>El artista asturiano más aclamado del momento.</div></div>
-
-<h2>🎪 Festivales</h2>
-
-<div class="e"><b>Válgame Fest</b>
-<div class="m"><span>📍 Arenas de Cabrales</span><span>🗓️ 2, 8, 9 y 10 mayo 2026</span></div>
-<div class="p"><span class="cat">Folk/Rock</span>Conciertos, pasacalles, mercado, juegos tradicionales y paellada. Experiencia asturiana auténtica junto a los Picos de Europa.</div></div>
-
-<div class="e"><b>Vibra Mahou Fest Gijón</b>
-<div class="m"><span>📍 Gijón, Recinto Ferial Luis Adaro</span><span>🗓️ 16 mayo 2026</span></div>
-<div class="p"><span class="cat">Indie/Rock/Pop</span>León Benavente, Alcalá Norte, Ginebras, Anabel Lee y más. Un solo día de festival urbano.</div></div>
-
-<div class="e"><b>Xixón Folk</b>
-<div class="m"><span>📍 Gijón, Parque Fluvial de Viesques</span><span>🗓️ 5 al 7 junio 2026</span></div>
-<div class="p"><span class="cat">Folk/Tradición</span>Música de raíz, artesanía, alimentación y cultura asturiana. Plan familiar de día completo.</div></div>
-
-<div class="e"><b>VESU Oviedo 2026</b>
-<div class="m"><span>📍 Oviedo / Ribera de Arriba, Central Artística de Bueño</span><span>🗓️ 26 al 28 junio 2026</span></div>
-<div class="p"><span class="cat">Indie/Vanguardia</span>María Arnal, Depresión Sonora, Dora Band y Puño Dragón. Propuestas escénicas contemporáneas.</div></div>
-
-<div class="e"><b>Metrópoli Gijón 2026</b>
-<div class="m"><span>📍 Gijón, Recinto Ferial Luis Adaro</span><span>🗓️ 26 junio al 5 julio 2026</span></div>
-<div class="p"><span class="cat">Pop/Rock/Cultura</span>Juan Magán + 3PAC, Coti, Comandante Twin, Sidecars, M-Clan, Loquillo. Gastronomía, actividades infantiles, market. 10 días de ocio.</div></div>
-
-<div class="e"><b>Gijón Life / WAY! Festival</b>
-<div class="m"><span>📍 Gijón, Parque Hermanos Castro</span><span>🗓️ Julio 2026</span></div>
-<div class="p"><span class="cat">Pop/Indie/Nostalgia</span>Conciertos sueltos y plan de ciudad. Cartel en desarrollo.</div></div>
-
-<div class="e"><b>Boombastic Asturias</b>
-<div class="m"><span>📍 Llanera, Aeródromo de la Morgal</span><span>🗓️ 16 al 18 julio 2026</span></div>
-<div class="p"><span class="cat">Urbano/Reguetón/Trap</span>El macrofestival urbano de referencia en Asturias. Cartel muy avanzado.</div></div>
-
-<div class="e"><b>Prestoso Fest</b>
-<div class="m"><span>📍 Cangas del Narcea</span><span>🗓️ 6 al 8 agosto 2026</span></div>
-<div class="p"><span class="cat">Indie/Rock</span>Música independiente en escapada rural. Cartel completo.</div></div>
-
-<div class="e"><b>Aquasella</b>
-<div class="m"><span>📍 Arriondas, Valle del Sella</span><span>🗓️ 13 al 16 agosto 2026</span></div>
-<div class="p"><span class="cat">Techno/House/Electrónica</span>El festival de electrónica más importante del norte. Cartel completo.</div></div>
-
-<div class="e"><b>Riverland Festival</b>
-<div class="m"><span>📍 Arriondas</span><span>🗓️ 21 al 23 agosto 2026</span></div>
-<div class="p"><span class="cat">Urbano/Rap/Reguetón</span>Cierre joven del verano con camping.</div></div>
-
-<h2>🎉 Fiestas</h2>
-
-<div class="e"><b>Fiestas de Bolgues</b>
-<div class="m"><span>📍 Las Regueras</span><span>🗓️ 5 al 7 junio 2026</span></div></div>
-
-<div class="e"><b>Fiestas de Cangas de Onís</b>
-<div class="m"><span>📍 Cangas de Onís</span><span>🗓️ 5 al 21 junio 2026</span></div></div>
-
-<div class="e"><b>XXX Certamen del Quesu d'Urbiés</b>
-<div class="m"><span>📍 Mieres</span><span>🗓️ 6 al 7 junio 2026</span></div>
-<div class="p"><span class="cat">Gastronomía</span></div></div>
-
-<div class="e"><b>Preba de la Sidra de Gascona</b>
-<div class="m"><span>📍 Oviedo, Calle Gascona</span><span>🗓️ 7 junio 2026</span></div>
-<div class="p"><span class="cat">Gastronomía</span>Cata popular de sidra en la calle más famosa de Oviedo.</div></div>
-
-<div class="e"><b>Alfombras Florales del Corpus</b>
-<div class="m"><span>📍 Castropol</span><span>🗓️ 7 junio 2026</span></div></div>
-
-<div class="e"><b>Festival de la Boroña</b>
-<div class="m"><span>📍 Torazo, Cabranes</span><span>🗓️ 7 junio 2026</span></div>
-<div class="p"><span class="cat">Gastronomía</span></div></div>
-
-<div class="e"><b>Fiestas de San Juan</b>
-<div class="m"><span>📍 Mieres</span><span>🗓️ 11 al 24 junio 2026</span></div></div>
-
-<div class="e"><b>Feria San Antonio</b>
-<div class="m"><span>📍 Gijón</span><span>🗓️ 12 al 14 junio 2026</span></div></div>
-
-<div class="e"><b>Fiesta Sacramental de Logrezana</b>
-<div class="m"><span>📍 Carreño</span><span>🗓️ 12 al 14 junio 2026</span></div></div>
-
-<div class="e"><b>FIMI — Festival Internacional Máscara Ibérica</b>
-<div class="m"><span>📍 Asturias (itinerante)</span><span>🗓️ 12 al 20 junio 2026</span></div></div>
-
-<div class="e"><b>Travesía Internacional Costa Naviega</b>
-<div class="m"><span>📍 Navia</span><span>🗓️ 14 junio 2026</span></div>
-<div class="p"><span class="cat">Deporte</span></div></div>
-
-<div class="e"><b>VII Paellada Popular</b>
-<div class="m"><span>📍 Bimenes</span><span>🗓️ 14 junio 2026</span></div></div>
-
-<div class="e"><b>Feria del Libro de Gijón/Xixón</b>
-<div class="m"><span>📍 Gijón</span><span>🗓️ 17 al 21 junio 2026</span></div>
-<div class="p"><span class="cat">Cultura</span></div></div>
-
-<div class="e"><b>Fiestas de Viesques</b>
-<div class="m"><span>📍 Gijón</span><span>🗓️ 19 al 21 junio 2026</span></div></div>
-
-<div class="e"><b>Festival Rociero</b>
-<div class="m"><span>📍 Llanes</span><span>🗓️ 19 al 21 junio 2026</span></div></div>
-
-<div class="e"><b>San Juan — Noche Mágica</b>
-<div class="m"><span>📍 Oviedo y Gijón</span><span>🗓️ 23 junio 2026</span></div>
-<div class="p">Fogueras, tradición y verbena en toda Asturias. Dos de las celebraciones más multitudinarias.</div></div>
-
-<div class="e"><b>La Sacramental de Cué</b>
-<div class="m"><span>📍 Llanes</span><span>🗓️ 24 junio 2026</span></div></div>
-
-<div class="e"><b>Procesión Marinera de San Juan</b>
-<div class="m"><span>📍 Soto del Barco</span><span>🗓️ 24 junio 2026</span></div></div>
-
-<div class="e"><b>Fiestas de San Pedro y San Pablo — Barrio de La Luz</b>
-<div class="m"><span>📍 Avilés</span><span>🗓️ 26 al 29 junio 2026</span></div></div>
-
-<div class="e"><b>Fiestas de Cudillero</b>
-<div class="m"><span>📍 Cudillero</span><span>🗓️ 28 junio al 1 julio 2026</span></div></div>
-
-<div class="e"><b>L'Amuravela</b>
-<div class="m"><span>📍 Cudillero</span><span>🗓️ 29 junio 2026</span></div>
-<div class="p"><span class="cat">Tradición</span>El tradicional sermón marinero en pixueto, único en el mundo.</div></div>
-
-<h2>🎭 Teatro y Artes Escénicas</h2>
-
-<div class="e"><b>"Una noche en el instituto"</b>
-<div class="m"><span>📍 Gijón, Centro Municipal Integrado El Llano</span><span>🗓️ 2 junio 2026</span></div></div>
-
-<div class="e"><b>"Inteligencia Artificial (Ay)"</b>
-<div class="m"><span>📍 Avilés</span><span>🗓️ 4 junio 2026</span></div></div>
-
-<h2>🖼️ Exposiciones y Cultura</h2>
-
-<div class="e"><b>Visita Animada Infantil-Familiar</b>
-<div class="m"><span>📍 Siero</span><span>🗓️ Dom 21 junio, 18:00h</span></div></div>
-
-<p class="footer">
-<a href="https://equipomorfeo.github.io">El Archivo</a> — Datos recopilados de fuentes públicas culturales de Asturias<br>
-<small>Fuentes: Blog Telecable, Asturias24, La Ganzúa, AsturiasTurismo, QuéHayHoy · <a href="https://equipomorfeo.github.io/expedientes/agenda-cultural.html">Actualizado 15/06/2026</a></small>
-</p>
-
+ function showTab(idx) {
+ document.querySelectorAll('.tab-btn').forEach((b, i) => {
+ if(b.innerText !== "General") b.classList.toggle('active', i === idx);
+ });
+ document.querySelectorAll('.tab-content').forEach((c, i) => c.classList.toggle('active', i === idx));
+ }
+</script>
 </body>
 </html>
