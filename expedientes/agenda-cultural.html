@@ -62,14 +62,14 @@ Techno, house, electrónica	Cartel completo	Amantes de la electrónica
  const rawData = document.getElementById('rawData').innerText.trim();
  const tabsContainer = document.getElementById('tabs');
  const contentContainer = document.getElementById('content');
- const sections = rawData.split(/(?=🎵|🎪|🎉|🎭|🖼️)/);
+ const sections = rawData.split(/\n(?====)/);
  let isFirst = true;
 
  sections.forEach((sec, index) => {
  if(sec.trim().length === 0) return;
  const lines = sec.trim().split('\n');
  let rawTitle = lines.shift().trim();
- let btnTitle = rawTitle.replace(/🎵|🎪|🎉|🎭|🖼️/g, '').trim();
+ let btnTitle = rawTitle.replace(/^=+\s*|\s*=+$/g, '').trim();
  if(!btnTitle) btnTitle = "General";
 
  const btn = document.createElement('button');
@@ -83,32 +83,32 @@ Techno, house, electrónica	Cartel completo	Amantes de la electrónica
  div.id = 'tab-' + index;
 
  let htmlContent = '';
- let currentCard = '';
- let currentTitle = '';
+ const hasTabs = lines.some(l => l.includes('\t'));
 
+ if(hasTabs) {
  for(let line of lines) {
  line = line.trim();
- if(!line || line.includes('EL ARCHIVO —') || line.includes('Actualizado:') || line.startsWith('⚠️')) continue;
-
- if(line.startsWith('📍') || line.startsWith('🗓️')) {
- currentCard += `<div class="event-meta">${line}</div>`;
- } else if (line.match(/^[A-Z][a-z]/) || line.match(/^[A-Z]+ /) || line.includes('—')) {
- if (currentTitle && currentCard.includes('📍')) {
- currentCard += `<div class="event-desc">${line}</div>`;
- htmlContent += `<div class="event-card"><div class="event-title">${currentTitle}</div>${currentCard}</div>`;
- currentCard = '';
- currentTitle = '';
- } else {
- currentTitle = line;
+ if(!line) continue;
+ const parts = line.split('\t').filter(p => p.trim());
+ if(parts.length === 0) continue;
+ const title = parts[0] || '';
+ const meta = parts[1] ? `<div class="event-meta">📍 ${parts[1]}</div>` : '';
+ const desc = parts[2] ? `<div class="event-desc">${parts[2]}</div>` : '';
+ htmlContent += `<div class="event-card"><div class="event-title">${title}</div>${meta}${desc}</div>`;
  }
  } else {
- if (currentTitle && currentCard) {
- currentCard += `<div class="event-desc">${line}</div>`;
+ let buf = '';
+ for(let line of lines) {
+ line = line.trim();
+ if(!line) { if(buf.trim()) { htmlContent += `<div class="event-card"><div class="event-desc">${buf.trim()}</div></div>`; buf = ''; } continue; }
+ if(/^\d{1,2}\s+(de\s+)?[a-záéíóúñ]+(\s+de\s+\d{4})?/i.test(line) || /\d{4}/.test(line.slice(0,80))) {
+ if(buf.trim()) { htmlContent += `<div class="event-card"><div class="event-desc">${buf.trim()}</div></div>`; }
+ buf = line;
+ } else {
+ buf += (buf ? ' ' : '') + line;
  }
  }
- }
- if(currentTitle) {
- htmlContent += `<div class="event-card"><div class="event-title">${currentTitle}</div>${currentCard}</div>`;
+ if(buf.trim()) htmlContent += `<div class="event-card"><div class="event-desc">${buf.trim()}</div></div>`;
  }
  div.innerHTML = htmlContent;
  contentContainer.appendChild(div);
